@@ -2,7 +2,7 @@ window.onload = function() {
     canva = document.getElementById("snake")
     ctx = canva.getContext("2d")
     document.addEventListener("keydown",keyPush)
-    document.getElementsById("score").innerHTML = 0
+    document.getElementById("score").innerHTML = 0
     setInterval(game,100)
 }
 
@@ -33,11 +33,11 @@ function game() {
     }
 
     ctx.fillStyle = "black"
-    ctx.ftllRect(0,0,canva.width,canva.height)
+    ctx.fillRect(0,0,canva.width,canva.height)
 
     ctx.fillStyle = "lime"
     for(let i = 0; i < trail.length ; i++) {
-        ctx.fillRect(trail[i].x * gs , trail[i].y * gs , gs-2 , gs-2)
+        ctx.fillRect(trail[i].x * gs , trail[i].y * gs , gs - 2 , gs - 2)
         if(trail[i].x == positionX && trail[i].y == positionY) {
             tail = 5
         }
@@ -59,9 +59,13 @@ function game() {
     }
     
     ctx.fillStyle = "red"
-    ctx.fillRect(cherryX * gs,cherryY * gs , gs-2 , gs-2)
+    ctx.fillRect(cherryX * gs, cherryY * gs, gs - 2, gs - 2)
 
-    function keyPush(evt) {
+    
+    
+}
+
+function keyPush(evt) {
         console.log(evt)
         switch(evt.keyCode) {
             case 37:
@@ -81,5 +85,3 @@ function game() {
                 yv = 1
         }
     }
-    
-}
