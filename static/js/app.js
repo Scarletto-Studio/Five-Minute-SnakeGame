@@ -55,7 +55,7 @@ function game() {
         tail++
         document.getElementById("score").innerHTML = ++score
         cherryX = Math.floor(Math.random() * tc)
-        cherryY = Math.floor(Math.randon() * tc)
+        cherryY = Math.floor(Math.random() * tc)
     }
     
     ctx.fillStyle = "red"
