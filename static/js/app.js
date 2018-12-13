@@ -40,6 +40,8 @@ function game() {
         ctx.fillRect(trail[i].x * gs , trail[i].y * gs , gs - 2 , gs - 2)
         if(trail[i].x == positionX && trail[i].y == positionY) {
             tail = 5
+            document.getElementById("score").innerHTML = 0
+            // alert("คุณชนหางตัวเอง กลับไปเล่นใหม่")
         }
     }
     trail.push({
